@@ -1,0 +1,8 @@
+CREATE TABLE stock (
+	id serial PRIMARY KEY,
+	company_code VARCHAR ( 50 ) UNIQUE NOT NULL,
+	posted_value double precision	NOT NULL,	
+    posted_date TIMESTAMP 
+);
+
+	docker run -d --name stock-pgadmin -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust postgres
