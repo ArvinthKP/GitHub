@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "9038538e-50b2-4be9-a474-c9c4642daa22",
+		"name": "stock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post stock",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyCode\":\"test1\",\t\r\n\t\"stockValue\":\"1.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8004/v2/api-docs",
+					"host": [
+						"localhost"
+					],
+					"port": "8004",
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

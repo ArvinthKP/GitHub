@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "971b79c3-3f81-4f10-aa81-1b6747de3dda",
+		"name": "Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyCode\":\"test1\",\t\r\n\t\"companyName\":\"tsd\",\t\r\n\t\"companyCEO\":\"test\",\t\r\n\t\"turnOver\":9,\t\r\n\t\"companyWebsite\":\"test\",\t\r\n\t\"stockExchange\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8003/api/v1.0/market/company/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8003",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
