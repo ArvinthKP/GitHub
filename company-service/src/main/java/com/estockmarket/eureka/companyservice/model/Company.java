@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.ToString;
 
@@ -12,6 +13,7 @@ import lombok.ToString;
 @Data
 @Document(collection = "company")
 @ToString
+@ApiModel
 public class Company {
 	
 //	@Transient

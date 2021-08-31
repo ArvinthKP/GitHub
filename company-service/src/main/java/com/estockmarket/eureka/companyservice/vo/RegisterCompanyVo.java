@@ -3,9 +3,11 @@ package com.estockmarket.eureka.companyservice.vo;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 @Data
+@ApiModel
 public class RegisterCompanyVo {
 	
 	@NotEmpty

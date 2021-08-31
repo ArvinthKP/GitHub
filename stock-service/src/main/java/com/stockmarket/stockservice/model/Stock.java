@@ -8,11 +8,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name = "stock")
+@ApiModel
 public class Stock {
 
 	@Id
