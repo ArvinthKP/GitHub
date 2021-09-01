@@ -17,4 +17,6 @@ public interface CompanyService {
 
 	void deleteCompany(@NotNull String companyCode);
 
+	Boolean companyExist(@NotNull String companyCode);
+
 }

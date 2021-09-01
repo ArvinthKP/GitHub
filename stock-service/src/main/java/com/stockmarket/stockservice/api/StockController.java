@@ -4,7 +4,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import javax.transaction.Transactional;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,5 +43,16 @@ public class StockController {
 		LocalDate stDate = LocalDate.parse(startDate);
 		LocalDate edDate = LocalDate.parse(endDate);
 		return stockService.listCompanyStockForTimePeriod(companyCode,stDate,edDate);
+	}
+	
+	@DeleteMapping("/delete/{companyCode}")
+	@Transactional
+	public int deleteCompany(@PathVariable("companyCode") @NotNull String companyCode) {
+		 return stockService.deleteCompany(companyCode);
+	}
+	
+	@GetMapping("/getStockPrice/{companyCode}")	
+	public String getStockPrice(@PathVariable("companyCode") @NotNull String companyCode) {
+		 return stockService.getStockPrice(companyCode);
 	}
 }

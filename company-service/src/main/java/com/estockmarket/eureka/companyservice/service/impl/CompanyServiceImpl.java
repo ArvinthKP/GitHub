@@ -40,6 +40,12 @@ public class CompanyServiceImpl implements CompanyService {
 	public void deleteCompany(@NotNull String companyCode) {		
 		 companyRepository.deleteById(companyCode);
 	}
+
+	@Override
+	public Boolean companyExist(@NotNull String companyCode) {
+		Optional<Company> company=companyRepository.findById(companyCode);
+		return company.isPresent()?Boolean.TRUE:Boolean.FALSE;
+	}
 	
 
 }
